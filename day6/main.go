@@ -31,4 +31,18 @@ func main() {
 	exMap3["c"] = 3
 	fmt.Println("ExMap3: ", exMap3)
 
+	delete(exMap3, "a")
+	fmt.Println("ExMap3: ", exMap3)
+	fmt.Println("ExMap3: ", len(exMap3))
+
+	// gan map với nhau sẽ thay đổi giá trị map gốc do đó reference type
+
+	value, isFound := exMap3["f"]
+	if isFound {
+		fmt.Println("ExMap3: ", value)
+	} else {
+		fmt.Println("ExMap3 not found f ")
+
+	}
+
 }
